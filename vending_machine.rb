@@ -42,7 +42,6 @@ def current_sales
   # 自動販売機の売り上げを表示する
   @sales
 end
-
 # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる。
 # 投入は複数回できる。
 def slot_money(money)
