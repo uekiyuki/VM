@@ -18,8 +18,7 @@ class VendingMachine
 # ステップ０　お金の投入と払い戻しの例コード
 # ステップ１　扱えないお金の例コード
 # 10円玉、50円玉、100円玉、500円玉、1000円札を１つずつ投入できる。
-MONEY = [10, 50, 100, 500, 1000].freeze
-
+MONEY = [10, 50, 100, 500, 1000].freezeß
 # （自動販売機に投入された金額をインスタンス変数の @slot_money に代入する）
 def initialize
 # 最初の自動販売機に入っている金額は0円
@@ -110,5 +109,5 @@ def purchasable?(drink_name)
 end
 
 def purchasable_drink_names
-  @stock_juice.select{|_, info| info[:price] <= total && info[:stock].any? }.keys
+  @stock_juice.select{|_, info| info[:price] <= @slot_money && info[:stock].any? }.keys
 end
